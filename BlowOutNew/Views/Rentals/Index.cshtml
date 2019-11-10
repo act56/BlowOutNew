@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+
+}
+@*// jQuery*@
+
+<script>
+    $(document).ready(function () {
+        hideShowInstrument();
+    });
+
+    function hideShowInstrument() {
+
+    }
+</script>
+
+
+
+<div class="contain">
+    <div class="col">
+        <a href="@Url.Action("Details", "Rentals", new { instrument = "Trumpet"})">
+            <img src="~/Content/images/Instruments/Trumpet.jpg" width="250" />
+            <p>Trumpet</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="@Url.Action("Details", "Rentals", new { instrument = "Trombone"})">
+            <img src="~/Content/images/Instruments/Trombone.jpg" width="250" />
+            <p>Trombone</p>
+    </div>
+    <div class="col">
+        <a href="@Url.Action("Details", "Rentals", new { instrument = "Tube"})">
+            <img src="~/Content/images/Instruments/Tuba.jpg" width="250" />
+            <p>Tuba</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="@Url.Action("Details", "Rentals", new { instrument = "Flute"})">
+            <img src="~/Content/images/Instruments/Flute.jpg" width="250" />
+            <p>Flute</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="@Url.Action("Details", "Rentals", new { instrument = "Clarinet"})">
+            <img src="~/Content/images/Instruments/Clarinet.jpg" width="250" />
+            <p>Clarinet</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="@Url.Action("Details", "Rentals", new { instrument = "Saxophone"})">
+            <img src="~/Content/images/Instruments/Saxophone.jpg" width="250" />
+            <p>Saxophone</p>
+        </a>
+    </div>
+</div>
