@@ -8,30 +8,41 @@
 <p>Please call Support at <strong><u>801-555-1212.</u></strong> Thank you!</p>
 
 
-    <!-- Contact -->
-    <div class="w3-center w3-padding-64" id="contact">
-        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+
+    <h3>Contact Form</h3>
+
+    <div class="container">
+        <form action="/action_page.php"> <!--this is where to enter the page where this user will be sent (Thank you page)-->
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstName" placeholder="First Name">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastName" placeholder="Last Name">
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phoneNumber" placeholder="Phone Number">
+
+            <label for="email">Phone Number</label>
+            <input type="text" id="email" name="email" placeholder="Email Address">
+
+            <label for="instrument">Country</label>
+            <select id="insrument" name="instrument">
+                <option value="trumpuet">Trumpet</option>
+                <option value="trombone">Trombone</option>
+                <option value="tuba">Tuba</option>
+                <option value="flute">Flute</option>
+                <option value="clarinet">Clarinet</option>
+                <option value="saxophone">Saxophone</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter a subject for the email">
+
+            <label for="message">Subject</label>
+            <textarea id="message" name="message" placeholder="Enter your message here" style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
     </div>
-
-    <form class="w3-container" action="/action_page.php" target="_blank">
-        <div class="w3-section">
-            <label>Name</label>
-            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
-        </div>
-        <div class="w3-section">
-            <label>Email</label>
-            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
-        </div>
-        <div class="w3-section">
-            <label>Subject</label>
-            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
-        </div>
-        <div class="w3-section">
-            <label>Message</label>
-            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
-        </div>
-        <button type="submit" class="w3-button w3-block w3-black">Send</button>
-    </form>
-
 
 
