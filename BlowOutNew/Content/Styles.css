@@ -39,6 +39,10 @@ html, body, h1, h2, h3, h4 {
     position: relative !important;
 }
 
+.w3-top {
+   margin-bottom:50px;
+}
+
 /*CSS Accordion Start*/
 $midnight: #2c3e50;
 $clouds: #ecf0f1;
@@ -60,7 +64,7 @@ h2 {
     font-weight: normal;
 }
 
-input {
+.accordion input {
     position: absolute;
     opacity: 0;
     z-index: -1;
@@ -249,7 +253,7 @@ input[type=submit] {
         background-color: #45a049;
     }
 
-.container {
+#contact .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
