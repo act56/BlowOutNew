@@ -43,51 +43,9 @@ html, body, h1, h2, h3, h4 {
    margin-bottom:50px;
 }
 
-/*CSS Accordion Start*/
-$midnight: #2c3e50;
-$clouds: #ecf0f1;
-// General
-body {
-    color: $midnight;
-    background: $clouds;
-    padding: 0 1em 1em;
-}
 
-h1 {
-    margin: 0;
-    line-height: 2;
-    text-align: center;
-}
-
-h2 {
-    margin: 0 0 .5em;
-    font-weight: normal;
-}
-
-.accordion input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-
-// Layout
-.row {
-    display: flex;
-    .col
-
-{
-    flex: 1;
-    &:last-child
-
-{
-    margin-left: 1em;
-}
-
-}
-}
 /* Accordion styles */
 .accordion {
-    max-width: 1000px;
     margin: 30px;
 }
 
@@ -105,7 +63,6 @@ h2 {
     font-weight: 400;
     z-index: 20;
     min-height: 5px;
-    max-width: 1000px;
     padding: 20px 30px 20px 30px;
     margin: 20px 0 0 0;
     position: relative;
@@ -126,7 +83,6 @@ h2 {
     src: url('../fonts/IcoMoon-Free-master/Font/IcoMoon-Free.ttf') format('truetype');
 }
 
-}
 
 .accordion input:checked + label:before {
     font-family: 'IcoMoon-Free';
@@ -203,6 +159,13 @@ h2 {
 .accordion #ingredients_coffee,
 .accordion #ingredients_creamer {
     margin-right: 0.85714% !important;
+}
+
+.instrumentTitle {
+    text-align: center;
+    background-color: #01b5ce;
+    padding: 20px;
+    color:white;
 }
 
 /*GRID CSS STARTS*/

@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
+using System.Text;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
+using BlowOutNew.Models;
 
 namespace BlowOutNew.Controllers
 {
@@ -31,8 +35,9 @@ namespace BlowOutNew.Controllers
 
 
         //Possible code for sending smtp emails
+
         [HttpGet]
-        public ActionResult ContactUs()
+        public ActionResult Contact()
         {
 
             return View();
@@ -111,27 +116,27 @@ namespace BlowOutNew.Controllers
         }
 
         [HttpPost]
-        public ActionResult Contact(Contact contact)
+        public ActionResult Contact(ContactRequest contact)
         {
             if (ModelState.IsValid)
             {
-
                 //prepare email
                 var toAddress = "ashlynlewis1@gmail.com";
-                var fromAddress = contact.EmailAddress.ToString();
-                var subject = "Test inquiry from " + contact.Name;
+                var fromAddress = contact.emailAddress.ToString();
+                var subject = "Test inquiry from " + contact.subject;
                 var message = new StringBuilder();
-                message.Append("Name: " + contact.Name + "\n");
-                message.Append("Email: " + contact.EmailAddress + "\n");
-                message.Append("phone: " + contact.phone + "\n\n");
-                message.Append(contact.message);
+                message.Append("Name: " + contact.firstName + contact.lastName + "\n");
+                message.Append("Email: " + contact.emailAddress + "\n");
+                message.Append("phone: " + contact.phoneNumber + "\n");
+                message.Append("Subject: " + contact.subject + "\n\n");
+                message.Append(contact.Message);
 
                 //start email Thread
                 var tEmail = new Thread(() =>
-               SendEmail(toAddress, fromAddress, subject, message));
+               SendEmail(toAddress, fromAddress, subject, contact.Message));
                 tEmail.Start();
             }
-            return View();
+            return View("Email", contact);
         }
     }
 }
