@@ -112,17 +112,23 @@ input {
 }
 
     .accordion label:before {
-        font-family: 'Lato', sans-serif;
-        content: '\e60f';
+        font-family: 'IcoMoon-Free';
+        content: 'circle-right';
         font-weight: bolder;
         float: right;
     }
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('../fonts/IcoMoon-Free-master/Font/IcoMoon-Free.ttf') format('truetype');
+}
 
-    .accordion input:checked + label:before {
-        font-family: 'Lato', sans-serif;
-        content: "\e620";
-        transition: 0.5s;
-    }
+}
+
+.accordion input:checked + label:before {
+    font-family: 'IcoMoon-Free';
+    content: "circle-down";
+    transition: 0.5s;
+}
 
 .accordion input + label {
     -webkit-transition: all 0.3s ease-in-out;

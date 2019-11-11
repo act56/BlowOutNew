@@ -17,7 +17,7 @@ namespace BlowOutNew.Controllers
 
         public ActionResult Email (string name, string email)
         {
-           ViewBag.Name = name;
+            ViewBag.Name = name;
             ViewBag.Email = email;
             
             return View("Email");

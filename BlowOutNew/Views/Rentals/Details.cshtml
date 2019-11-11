@@ -7,18 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
+    <link href="../fonts/IcoMoon-Free-master/Font/IcoMoon-Free.ttf') format('truetype)";>
     <link href="~/Content/Styles.css" rel="stylesheet" />
 </head>
 
 <h1>Instrument Rental Pricing</h1>
 <!-- ACCORDIAN TABS -->
 
-
-
-<div class="container ">
+<div class="container">
     <div class="content" style="margin:auto;">
 
-        <div id="Trumpet" >
+        <div id="Trumpet" style="display:none;">
             <h3 style="text-align:left">TRUMPET</h3>
             <div class="accordion">
                 <!--Accordion 1-->
@@ -51,6 +50,7 @@
                 </div>
             </div>
         </div>
+
 
         <div id="Trombone" style="display:none;">
             <h3 style="text-align:left">TROMBONE</h3>
@@ -226,4 +226,18 @@
             </div>
         </div>
     </div>
+</div>
+
+<script>
+
+
+    var instrumentName = '#@Html.Raw((String)ViewBag.Name)';        var element = $(instrumentName);        debugger;    element.show();
+
+    (() => {        // something here         
+        //debugger;        //$(instrumentName).show();
+
+
+            })();
+
+</script>
 

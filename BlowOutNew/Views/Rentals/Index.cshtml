@@ -6,50 +6,40 @@
 }
 @*// jQuery*@
 
-<script>
-    $(document).ready(function () {
-        hideShowInstrument();
-    });
-
-    function hideShowInstrument() {
-
-    }
-</script>
-
 
 
 <div class="contain">
     <div class="col">
-        <a href="@Url.Action("Details", "Rentals", new { instrument = "Trumpet"})">
+        <a href="@Url.Action("Details", "Rentals", new { instrumentName = "Trumpet"})">
             <img src="~/Content/images/Instruments/Trumpet.jpg" width="250" />
             <p>Trumpet</p>
         </a>
     </div>
     <div class="col">
-        <a href="@Url.Action("Details", "Rentals", new { instrument = "Trombone"})">
+        <a href="@Url.Action("Details", "Rentals", new { instrumentName = "Trombone"})">
             <img src="~/Content/images/Instruments/Trombone.jpg" width="250" />
             <p>Trombone</p>
     </div>
     <div class="col">
-        <a href="@Url.Action("Details", "Rentals", new { instrument = "Tube"})">
+        <a href="@Url.Action("Details", "Rentals", new { instrumentName = "Tube"})">
             <img src="~/Content/images/Instruments/Tuba.jpg" width="250" />
             <p>Tuba</p>
         </a>
     </div>
     <div class="col">
-        <a href="@Url.Action("Details", "Rentals", new { instrument = "Flute"})">
+        <a href="@Url.Action("Details", "Rentals", new { instrumentName = "Flute"})">
             <img src="~/Content/images/Instruments/Flute.jpg" width="250" />
             <p>Flute</p>
         </a>
     </div>
     <div class="col">
-        <a href="@Url.Action("Details", "Rentals", new { instrument = "Clarinet"})">
+        <a href="@Url.Action("Details", "Rentals", new { instrumentName = "Clarinet"})">
             <img src="~/Content/images/Instruments/Clarinet.jpg" width="250" />
             <p>Clarinet</p>
         </a>
     </div>
     <div class="col">
-        <a href="@Url.Action("Details", "Rentals", new { instrument = "Saxophone"})">
+        <a href="@Url.Action("Details", "Rentals", new { instrumentName = "Saxophone"})">
             <img src="~/Content/images/Instruments/Saxophone.jpg" width="250" />
             <p>Saxophone</p>
         </a>
