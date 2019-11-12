@@ -134,9 +134,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\AboutUs\52047605_1190116581145639_8202011548097445888_n.jpg" />
-    <Content Include="Content\images\AboutUs\Dolezal JZD Marek Musil.jpg" />
-    <Content Include="Content\images\AboutUs\KateHeadshots-2-of-6-1024x684.jpg" />
+    <Content Include="Content\images\AboutUs\Dolezal_JZD-Marek_Musil_Vert4x6.jpg" />
+    <Content Include="Content\images\AboutUs\KateHeadshots_Vert4x6jpg.jpg" />
+    <Content Include="Content\images\AboutUs\MatthewVaughn.jpg" />
     <Content Include="Content\images\brass-3099922_1920.jpg" />
     <Content Include="Content\images\clarinet-small.jpg" />
     <Content Include="Content\images\Instruments\Clarinet.jpg" />
