@@ -4,7 +4,7 @@
 
 .container {
     margin:auto;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 .myFooterText {
@@ -43,7 +43,10 @@ html, body, h1, h2, h3, h4 {
    margin-bottom:50px;
 }
 
-
+.width1000{
+    margin:auto;
+    width:75%;
+}
 /* Accordion styles */
 .accordion {
     margin: 30px;
