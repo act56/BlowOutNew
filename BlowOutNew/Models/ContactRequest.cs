@@ -29,9 +29,9 @@ namespace BlowOutNew.Models
         [Display(Name = "Phone Number")]
         public string phoneNumber { get; set; }
 
-        [Required]
-        [Display(Name ="Instrument Name")]
-        public string instrumentName { get; set; }
+        //[Required]
+        //[Display(Name ="Instrument Name")]
+        //public string instrumentName { get; set; }
 
         [Required]
         [StringLength(30)]

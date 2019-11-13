@@ -12,7 +12,7 @@
     
     <div class="form-horizontal">
         <hr />
-        <p style="font-size:large">Questions? Please call Support at <strong><u>801-555-1212.</u></strong> Thank you!  Or fill out your information below and we'll send you an email.</p>
+        <p style="font-size:large">Questions?</p> @Html.Raw(ViewBag.Support)
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -73,7 +73,8 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Submit" class="btn btn-default" />
+                @*<a href="@Url.Action("Email","Contact")"><p class="btn btn-default">Submit</p></a>*@
             </div>
         </div>
     </div>
