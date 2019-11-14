@@ -21,14 +21,14 @@ namespace BlowOutNew.Controllers
             return View();
         }
 
-        
-        //public ActionResult Email(string firstName, string lastName, string emailAddress)
-        //{
-        //    ViewBag.Name = firstName + " " + lastName;
-        //    ViewBag.Email = emailAddress;
 
-        //    return View();
-        //}
+        public ActionResult Email(string firstName, string lastName, string emailAddress)
+        {
+            ViewBag.Name = firstName + " " + lastName;
+            ViewBag.Email = emailAddress;
+
+            return View();
+        }
 
         public ActionResult AboutUs()
         {
@@ -41,7 +41,7 @@ namespace BlowOutNew.Controllers
         [HttpGet]
         public ActionResult Contact()
         {
-
+            ViewBag.Support = "Please call Support at <strong><u>801-555-1212.</u></strong> Thank you!";
             return View();
         }
 
@@ -131,8 +131,8 @@ namespace BlowOutNew.Controllers
             if (ModelState.IsValid)
             {
                 //prepare email
-                var toAddress = "is403test@gmail.com";
-            var fromAddress = contact.emailAddress.ToString();
+                var toAddress = "ashlynlewis1@gmail.com";
+            var fromAddress = contact.emailAddress;
             var subject = "BlowOut Instrument Rental Inquiry: " + contact.subject;
             var message = new StringBuilder();
             message.Append("Name: " + contact.firstName + contact.lastName + "\n");
@@ -149,7 +149,7 @@ namespace BlowOutNew.Controllers
                 ViewBag.Name = contact.firstName + " " + contact.lastName;
                 ViewBag.Email = contact.emailAddress;
 
-                return View("Email");
+                return View("Email",contact);
             }
 
             
