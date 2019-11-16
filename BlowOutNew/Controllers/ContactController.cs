@@ -36,8 +36,8 @@ namespace BlowOutNew.Controllers
         }
 
 
-        //Possible code for sending smtp emails
-
+        
+        //pulls the contact page for collecting contact information
         [HttpGet]
         public ActionResult Contact()
         {
@@ -45,7 +45,7 @@ namespace BlowOutNew.Controllers
             return View();
         }
 
-        
+        //Sending smtp emails
         public ActionResult Email(ContactRequest contact)
         {
             ViewBag.Name = contact.firstName + " " + contact.lastName;
@@ -54,6 +54,7 @@ namespace BlowOutNew.Controllers
             return View("Email",contact);
         }
 
+        //this code set up the email to send
         public void SendEmail(string toAddress, string fromAddress,
                       string subject, string message)
         {
@@ -125,13 +126,14 @@ namespace BlowOutNew.Controllers
 
         }
 
+        //this code validates the inputs from the model and prepares the email
         [HttpPost]
         public ActionResult Contact(ContactRequest contact)
         {
             if (ModelState.IsValid)
             {
                 //prepare email
-                var toAddress = "ashlynlewis1@gmail.com";
+                var toAddress = "is403test@gmail.com";
             var fromAddress = contact.emailAddress;
             var subject = "BlowOut Instrument Rental Inquiry: " + contact.subject;
             var message = new StringBuilder();

@@ -3,6 +3,8 @@
     ViewBag.Title = "Details";
 }
 
+@*This page is where all of the pricing details are displayed.  It also includes the contract details.*@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,10 +114,7 @@
             </div>
         </div>    
 </div>
-
-        
-            
-
+          
 
         <div id="Flute" style="display:none;">
             <h4 class="instrumentTitle">FLUTE</h4>
@@ -219,6 +218,9 @@
         </div>
     </div>
  </div>
+
+@*This jquery script is what displays the divs above.  This is driven by the instrument id that is passed through from the route/index
+page.*@
 
 <script>
 

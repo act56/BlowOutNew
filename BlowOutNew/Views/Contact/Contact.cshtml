@@ -6,6 +6,8 @@
 
 <h2>Contact</h2>
 
+@*This is the code scaffolded for the contact page using the model.  It is strongly typed.*@
+
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -74,7 +76,6 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Submit" class="btn btn-default" />
-                @*<a href="@Url.Action("Email","Contact")"><p class="btn btn-default">Submit</p></a>*@
             </div>
         </div>
     </div>
